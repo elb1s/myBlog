@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import Project from "./Project";
+import khatsapp from "../assets/Projects/khatsapp.png";
+import boyoz from "../assets/Projects/boyoz.png";
+import wordle from "../assets/Projects/wordle.png";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const Works = () => {
@@ -36,46 +40,27 @@ const Works = () => {
   const projects = [
     {
       name: "Boyoz",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates",
-      img: "",
-      code: "https://github.com/elb1s",
+      description: "Boyoz is a forum you can discuss ideas and ask questions.",
+      img: boyoz,
+      code: "https://github.com/elb1s/boyoz-net",
       video: "https://www.youtube.com/results?search_query=ricky",
       demo: "https://google.com",
     },
     {
       name: "Wordle-Clone",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates",
-      img: "",
-      code: "https://github.com/elb1s",
+      description: "This is a clone of wordle game with a public word API. ",
+      img: wordle,
+      code: "https://github.com/elb1s/wordle-clone",
       video: "https://www.youtube.com/results?search_query=ricky",
       demo: "https://google.com",
     },
-    {
-      name: "Boyoz",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates",
-      img: "",
-      code: "https://github.com/elb1s",
-      video: "https://www.youtube.com/results?search_query=ricky",
-      demo: "https://google.com",
-    },
+
     {
       name: "Khatsapp",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates",
-      img: "",
-      code: "https://github.com/elb1s",
-      video: "https://www.youtube.com/results?search_query=ricky",
-      demo: "https://google.com",
-    },
-    {
-      name: "Manage App",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates",
-      img: "",
-      code: "https://github.com/elb1s",
+        "Khatsapp is a chat app that you can message with your friends.",
+      img: khatsapp,
+      code: "https://github.com/elb1s/khatsapp",
       video: "https://www.youtube.com/results?search_query=ricky",
       demo: "https://google.com",
     },
@@ -99,7 +84,7 @@ const Works = () => {
         className="text-center mb-20"
       >
         <h1 className="text-4xl md:text-6xl">MY WORKS</h1>
-        <p className="font-roboto text-indigo-800">
+        <p className="font-roboto text-indigo-600">
           Since I typically release my applications on free platforms, some of
           their demos may no longer be available. As a result, you may need to
           rely on videos to see demonstrations of certain projects.
@@ -112,14 +97,15 @@ const Works = () => {
         >
           You can visit my
           <a
-            className="text-purple-500 font-bold px-2"
+            className="text-indigo-900 font-bold px-2"
             href="https://www.youtube.com/channel/UC8xBm-ZO5dbpeLYkW-AIdeg"
             target="_blank"
             rel="noreferrer"
           >
             YouTube channel
           </a>
-          for video edits
+          for
+          <span className=" font-roboto"> video edits.</span>
         </p>
       </motion.div>
       <motion.div
@@ -127,7 +113,7 @@ const Works = () => {
         animate={controls}
         initial="hidden"
         variants={titleChildVariant}
-        className=" max-w-4xl items-center mx-auto gap-6 flex flex-col"
+        className=" max-w-3xl items-center mx-auto gap-6 flex flex-col"
       >
         {projects.map((project, idx) => (
           <Project project={project} key={idx} />

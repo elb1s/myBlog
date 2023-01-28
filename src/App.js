@@ -1,4 +1,3 @@
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -7,13 +6,12 @@ import Whoami from "./components/Whoami";
 import Works from "./components/Works";
 function App() {
   return (
-    <div>
+    <div className="bg-gradient-to-t from-[#def3ffd8] bg-opacity-80 to-[#ffffff]">
       <Navbar />
       <Hero />
       <Whoami />
       <Technologies />
       <Works />
-      <Contact />
       <Footer />
     </div>
   );

@@ -53,8 +53,8 @@ const Whoami = () => {
         initial="hidden"
         className="gap-16 items-center flex flex-col mt-5 md:mt-0 p-6"
       >
-        <h1 className="text-4xl md:text-6xl ">WHOAMI</h1>
-        <p className="text-xl font-light">
+        <h1 className="text-4xl md:text-6xl  ">WHOAMI</h1>
+        <p className="text-xl  text-justify ">
           I met YouTube when I was 10 years old. Since then, I have consumed
           thousands of pieces of content that can be used for both entertainment
           and self-development. I also learned how to edit these contents. I

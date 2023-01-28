@@ -78,7 +78,9 @@ const Technologies = () => {
         <h1 className="text-4xl md:text-6xl">Technologies utilized</h1>
 
         <div>
-          <h1 className="text-2xl md:text-3xl">Front-end Development</h1>
+          <h1 className="text-2xl md:text-3xl text-gray-600">
+            Front-end Development
+          </h1>
           <div className="flex gap-4 flex-wrap">
             {frontEnd.map((tech) => (
               <motion.img
@@ -96,7 +98,7 @@ const Technologies = () => {
           variants={titleVariant}
           animate={controls}
         >
-          <h1 className="text-2xl md:text-3xl">Video editing</h1>
+          <h1 className="text-2xl md:text-3xl text-gray-600">Video editing</h1>
           <div className="flex gap-4 ">
             {videoEditing.map((tech) => (
               <motion.img

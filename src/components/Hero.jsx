@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import firstImg from "../assets/first.jpg";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
+
 const Hero = () => {
   const [isSkew, setIsSkew] = useState(true);
   const variants = {
@@ -41,7 +43,7 @@ const Hero = () => {
   };
 
   return (
-    <div id="home" className="md:flex max-w-7xl mx-auto mt-24 items-center ">
+    <div id="home" className="md:flex max-w-7xl mx-auto pt-24 items-center ">
       <div className="md:w-1/2 flex flex-col">
         <motion.div variants={titleVariant} initial="hidden" animate="visible">
           <motion.h1
@@ -52,28 +54,41 @@ const Hero = () => {
           </motion.h1>
           <motion.p
             variants={titleChildVariant}
-            className="font-scope text-xl md:text-2xl text-center md:text-justify md:pr-32 mt-6 "
+            className="font-scope text-xl md:text-2xl text-center md:text-justify md:pr-32 mt-6"
           >
             Hi, my name is Suleyman. I educated myself in video editing and
             front-end development.
           </motion.p>
         </motion.div>
-        <div className="flex gap-3 mt-6 mx-auto md:mx-0">
+        <div className="flex gap-4 mt-6 mx-auto md:mx-0">
+          <a
+            href="https://www.upwork.com/freelancers/~0121d665cc5bdfb1bb"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <motion.button
+              variants={buttonVariant}
+              initial="hidden"
+              animate="visible"
+              className="bg-blue-700 bg-opacity-60 px-4 py-3 hover:bg-black hover:text-white  hover:border-white duration-200 text-white  rounded-full  border-black border-b-2 "
+            >
+              Hire Me!
+            </motion.button>
+          </a>
           <motion.button
             variants={buttonVariant}
             initial="hidden"
             animate="visible"
-            className="bg-gradient-to-b from-[#3150eb88]  to-[#7826db96] bg-opacity-40 px-6 py-3 text-white rounded-full"
+            className="bg-blue-700 bg-opacity-60 px-5 py-3 text-white rounded-full hover: hover:text-white hover:bg-black hover:border-white duration-200 border-black border-b-2 "
           >
-            Hire Me!
-          </motion.button>
-          <motion.button
-            variants={buttonVariant}
-            initial="hidden"
-            animate="visible"
-            className="bg-gradient-to-b from-[#7e56f9] to-[#6ed4cbc0] bg-opacity-50 px-6 py-3 text-white rounded-full"
-          >
-            Contact Me!
+            <a
+              className="cursor-pointer"
+              href="https://twitter.com/bum1nk"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Contact Me
+            </a>
           </motion.button>
         </div>
       </div>
