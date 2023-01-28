@@ -34,7 +34,10 @@ const Whoami = () => {
   }, [controls, inView]);
 
   return (
-    <div className="max-w-7xl mx-auto mt-40 flex flex-col md:flex md:flex-row md:gap-40 font-scope">
+    <div
+      id="whoami"
+      className="max-w-7xl mx-auto mt-40 flex flex-col md:flex md:flex-row md:gap-40 font-scope"
+    >
       <motion.div
         ref={ref}
         variants={variants}

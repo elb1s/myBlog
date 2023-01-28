@@ -64,7 +64,10 @@ const Technologies = () => {
   }, [controls, inView]);
 
   return (
-    <div className="max-w-7xl mx-auto mt-40 flex flex-col md:flex md:flex-row md:gap-40 font-scope items-center">
+    <div
+      id="techs"
+      className="max-w-7xl mx-auto mt-40 flex flex-col md:flex md:flex-row md:gap-40 font-scope items-center"
+    >
       <motion.div
         initial="hidden"
         ref={ref}

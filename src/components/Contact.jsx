@@ -46,6 +46,7 @@ const ContactUs = () => {
 
   return (
     <motion.div
+      id="contactme"
       ref={ref}
       variants={variant}
       animate={controls}

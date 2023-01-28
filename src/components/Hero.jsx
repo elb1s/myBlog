@@ -41,7 +41,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="md:flex max-w-7xl mx-auto mt-24 items-center ">
+    <div id="home" className="md:flex max-w-7xl mx-auto mt-24 items-center ">
       <div className="md:w-1/2 flex flex-col">
         <motion.div variants={titleVariant} initial="hidden" animate="visible">
           <motion.h1

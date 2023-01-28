@@ -87,7 +87,10 @@ const Works = () => {
   }, [controls, inView]);
 
   return (
-    <div className="max-w-7xl mx-auto mt-40 font-scope  p-6 md:p-0  ">
+    <div
+      id="myworks"
+      className="max-w-7xl mx-auto mt-40 font-scope  p-6 md:p-0  "
+    >
       <motion.div
         ref={ref}
         animate={controls}
