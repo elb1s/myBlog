@@ -1,5 +1,4 @@
 import React from "react";
-import second from "../assets/second.jpg";
 import first from "../assets/first.jpg";
 const Project = ({ project }) => {
   return (
@@ -28,7 +27,7 @@ const Project = ({ project }) => {
         </div>
       </div>
       <div className="h-60 w-1/3 hidden md:flex">
-        <img src={first} className="w-full h-full" />
+        <img src={first} className="w-full h-full" alt="proj" />
       </div>
     </div>
   );

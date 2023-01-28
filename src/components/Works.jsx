@@ -61,8 +61,8 @@ const Works = () => {
         </p>
       </div>
       <div className=" max-w-4xl items-center mx-auto gap-6 flex flex-col">
-        {projects.map((project) => (
-          <Project project={project} />
+        {projects.map((project, idx) => (
+          <Project project={project} key={idx} />
         ))}
       </div>
     </div>
