@@ -1,12 +1,55 @@
-import React from "react";
+import React, { useEffect } from "react";
 import whoami from "../assets/whoami.webp";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const Whoami = () => {
+  const [ref, inView] = useInView();
+  const controls = useAnimation();
+  const titleVariant = {
+    hidden: {
+      x: 70,
+      opacity: 0,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.6, delay: 0.6 },
+    },
+  };
+
+  const variants = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.7 },
+      rotate: 0,
+    },
+    hidden: { opacity: 0, scale: 0.2, rotate: 120 },
+  };
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <div className="max-w-7xl mx-auto mt-40 flex flex-col md:flex md:flex-row md:gap-40 font-scope">
-      <div className="md:w-[1300px] w-[300px]  flex mx-auto ">
+      <motion.div
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={controls}
+        className="md:w-[1300px] w-[300px]  flex mx-auto "
+      >
         <img src={whoami} className="rounded-full" alt="desItem" />
-      </div>
-      <div className="gap-16 items-center flex flex-col mt-5 md:mt-0 p-6">
+      </motion.div>
+      <motion.div
+        animate={controls}
+        variants={titleVariant}
+        initial="hidden"
+        className="gap-16 items-center flex flex-col mt-5 md:mt-0 p-6"
+      >
         <h1 className="text-4xl md:text-6xl ">WHOAMI</h1>
         <p className="text-xl font-light">
           I met YouTube when I was 10 years old. Since then, I have consumed
@@ -14,7 +57,7 @@ const Whoami = () => {
           and self-development. I also learned how to edit these contents. I
           spent the last 6 months concentrating on web development. 
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
