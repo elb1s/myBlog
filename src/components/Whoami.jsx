@@ -56,9 +56,9 @@ const Whoami = () => {
         <h1 className="text-4xl md:text-6xl  ">WHOAMI</h1>
         <p className="text-xl  text-justify ">
           I met YouTube when I was 10 years old. Since then, I have consumed
-          thousands of pieces of content that can be used for both entertainment
-          and self-development. I also learned how to edit these contents. I
-          spent the last 6 months concentrating on web development. 
+          tens of thousands of pieces of content suitable for both entertainment
+          and education and self-development. I also learned how to edit this
+          content. Currently, I'm concentrating on web development.
         </p>
       </motion.div>
     </div>

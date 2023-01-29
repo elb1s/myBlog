@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import Project from "./Project";
 import khatsapp from "../assets/Projects/khatsapp.png";
 import boyoz from "../assets/Projects/boyoz.png";
-import wordle from "../assets/Projects/wordle.png";
-
+import boyuncu from "../assets/Projects/boyuncu.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const Works = () => {
@@ -43,16 +42,8 @@ const Works = () => {
       description: "Boyoz is a forum you can discuss ideas and ask questions.",
       img: boyoz,
       code: "https://github.com/elb1s/boyoz-net",
-      video: "https://www.youtube.com/results?search_query=ricky",
-      demo: "https://google.com",
-    },
-    {
-      name: "Wordle-Clone",
-      description: "This is a clone of wordle game with a public word API. ",
-      img: wordle,
-      code: "https://github.com/elb1s/wordle-clone",
-      video: "https://www.youtube.com/results?search_query=ricky",
-      demo: "https://google.com",
+      video: "https://www.youtube.com/watch?v=BJjt7sxEV-g",
+      demo: "https://boyoz.netlify.app/",
     },
 
     {
@@ -61,8 +52,14 @@ const Works = () => {
         "Khatsapp is a chat app that you can message with your friends.",
       img: khatsapp,
       code: "https://github.com/elb1s/khatsapp",
-      video: "https://www.youtube.com/results?search_query=ricky",
-      demo: "https://google.com",
+      video: "https://www.youtube.com/watch?v=X29ieZAAoEM",
+      demo: "https://khasapp.netlify.app/",
+    },
+    {
+      name: "Bağımsız Oyuncu Website",
+      description: "Personal website for YouTuber Bağımsız Oyuncu",
+      img: boyuncu,
+      demo: "https://bagimsizoyuncu.netlify.app/",
     },
   ];
   useEffect(() => {

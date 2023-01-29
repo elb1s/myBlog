@@ -1,5 +1,4 @@
 import React from "react";
-import first from "../assets/first.jpg";
 const Project = ({ project }) => {
   return (
     <div className=" bg-gradient-to-t from-[#27b2fdd8] bg-opacity-80 to-[#6459f5]   h-60 w-full flex justify-between rounded-xl shadow-lg overflow-hidden text-white">
@@ -9,21 +8,28 @@ const Project = ({ project }) => {
           {project.description}
         </p>
         <div className="flex  gap-4 mx-auto text-black">
-          <button className="bg-white rounded-full  hover:bg-black hover:text-white  border-b-2  border-black  hover:border-white duration-200  px-4 py-2">
+          {project.code && (
             <a href={project.code} target="_blank" rel="noreferrer">
-              Source Code
+              <button className="bg-white rounded-full  hover:bg-black hover:text-white  border-b-2  border-black  hover:border-white duration-200  px-4 py-2">
+                Source Code
+              </button>
             </a>
-          </button>
-          <button className="bg-white rounded-full hover:bg-black hover:text-white  border-b-2  border-black hover:border-white duration-200  px-4 py-2">
+          )}
+          {project.demo && (
             <a href={project.demo} target="_blank" rel="noreferrer">
-              Demo
+              <button className="bg-white rounded-full hover:bg-black hover:text-white  border-b-2  border-black hover:border-white duration-200  px-4 py-2">
+                Demo
+              </button>
             </a>
-          </button>
-          <button className="bg-white rounded-full hover:bg-black hover:text-white  border-b-2  border-black hover:border-white duration-200  px-4 py-2">
+          )}
+
+          {project.video && (
             <a href={project.video} target="_blank" rel="noreferrer">
-              Video
+              <button className="bg-white rounded-full hover:bg-black hover:text-white  border-b-2  border-black hover:border-white duration-200  px-4 py-2">
+                Video
+              </button>
             </a>
-          </button>
+          )}
         </div>
       </div>
       <div className="h-60 w-1/3 hidden md:flex">
